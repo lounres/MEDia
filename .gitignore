@@ -1,0 +1,10 @@
+### Lounres's template template
+# IntelliJ project files
+.idea/*
+!.idea/icon.svg
+!.idea/scopes
+!.idea/copyright
+!.idea/runConfigurations
+*.iml
+out
+gen

@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "MEDia",
+    "description": "The title for the blog used in SEO"
+  },
+  "description": {
+    "message": "Mathematical Experiments Diary",
+    "description": "The description for the blog used in SEO"
+  },
+  "sidebar.title": {
+    "message": "Недавние посты",
+    "description": "The label for the left sidebar"
+  }
+}

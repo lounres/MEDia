@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="3000mm"
+   height="3000mm"
+   viewBox="0 0 3000 3000"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <path
+       style="fill:#ade8f4;fill-rule:evenodd;stroke-width:540.062;paint-order:markers stroke fill;stroke:none;fill-opacity:1"
+       d="M 400.00009,1800 V 400.00006 H 600.00016 V 1800 Z"
+       id="path1" />
+    <path
+       style="fill:#ade8f4;fill-rule:evenodd;stroke-width:540.062;paint-order:markers stroke fill;stroke:none;fill-opacity:1"
+       d="M 600.00016,400.00006 H 800.00011 L 1000.0001,1800 H 800.00011 Z"
+       id="path2" />
+    <path
+       style="fill:#ade8f4;fill-rule:evenodd;stroke-width:540.062;paint-order:markers stroke fill;stroke:none;fill-opacity:1"
+       d="m 1000.0001,1800 200,-1399.99994 h 200 L 1200.0001,1800 Z"
+       id="path3" />
+    <path
+       style="fill:#ade8f4;fill-rule:evenodd;stroke-width:540.062;paint-order:markers stroke fill;stroke:none;fill-opacity:1"
+       d="m 1400.0001,400.00006 h 200 V 1800 h -200 z"
+       id="path4" />
+    <path
+       style="fill:#ade8f4;fill-rule:evenodd;stroke-width:500;paint-order:markers stroke fill;stroke:none;fill-opacity:1"
+       d="M 1800.0001,400.00006 H 2600 v 199.99998 h -799.9999 z"
+       id="path5" />
+    <path
+       style="fill:#ade8f4;fill-rule:evenodd;stroke-width:500;paint-order:markers stroke fill;stroke:none;fill-opacity:1"
+       d="M 1800.0001,996.44446 2600,999.99999 V 1200 h -799.9999 z"
+       id="path6" />
+    <path
+       style="fill:#ade8f4;fill-rule:evenodd;stroke-width:500;paint-order:markers stroke fill;stroke:none;fill-opacity:1"
+       d="M 1800.0001,1600 H 2600 v 199.9999 h -799.9999 z"
+       id="path7" />
+    <path
+       style="fill:#ade8f4;fill-rule:evenodd;stroke-width:249.999;paint-order:markers stroke fill;stroke:none;fill-opacity:1"
+       d="m 1800.0001,700.00002 h 200 V 900 h -200 z"
+       id="path8" />
+    <path
+       style="fill:#ade8f4;fill-rule:evenodd;stroke-width:249.999;paint-order:markers stroke fill;stroke:none;fill-opacity:1"
+       d="m 1800.0001,1300 h 200 v 200.0001 h -200 z"
+       id="path9" />
+    <path
+       style="fill:#ade8f4;fill-rule:evenodd;stroke-width:19685;paint-order:markers stroke fill;stroke:none;fill-opacity:1"
+       d="M 200.00009,2000 H 2800.0001 v 599.9999 H 2600 V 2200 H 400.00009 v 399.9999 h -200 z"
+       id="path10" />
+  </g>
+</svg>

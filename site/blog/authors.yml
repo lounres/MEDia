@@ -1,0 +1,12 @@
+lounres:
+  name: Gleb Minaev
+  title: Blog owner, maths computer experiments enthusiast
+  page: true
+  url: https://lounres.dev
+  email: minaevgleb@yandex.ru
+  image_url: /img/authors/lounres.png
+  socials:
+#    x: lounres
+    github: lounres
+#    vk: lounres
+#    telegram: lounres
