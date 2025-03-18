@@ -22,7 +22,7 @@ import dev.lounres.kone.collections.utils.component6
 import dev.lounres.kone.collections.utils.component7
 import dev.lounres.kone.combinatorics.enumerative.permutations
 import dev.lounres.kone.comparison.eq
-import dev.lounres.kone.context
+import dev.lounres.kone.context.invoke
 
 
 /**
@@ -54,7 +54,7 @@ val ФЕВРАЛЬ.frac2: Rational get() = Rational(В * 10 + Р, (А * 10 + Л)
  * A function that validates that the sum is actually one.
  * So, if the digits are all different, the instance is the sought solution of the rebus.
  */
-fun ФЕВРАЛЬ.check(): Boolean = Ф != 0 && Е != 0 && В != 0 && А != 0 && context(Rational.context) { frac1 + frac2 eq one }
+fun ФЕВРАЛЬ.check(): Boolean = Ф != 0 && Е != 0 && В != 0 && А != 0 && Rational.context { frac1 + frac2 eq one }
 
 /**
  * Just a plain list of digits.
@@ -69,7 +69,7 @@ val февральPermutations: Sequence<ФЕВРАЛЬ> =
         .map { ФЕВРАЛЬ(it) } // We put them in our data class.
         .filter { it.check() } // Then we filter out all non-solutions.
         .sortedWith( // In the end, we sort the solutions by value of the first fraction, then by value of Ф. I was asked to do it.
-            Comparator<ФЕВРАЛЬ> { perm1, perm2 -> context(Rational.context) { (perm1.frac1 - perm2.frac1).numerator compareTo 0 } }.thenBy { it.Ф }
+            Comparator<ФЕВРАЛЬ> { perm1, perm2 -> Rational.context { (perm1.frac1 - perm2.frac1).numerator compareTo 0 } }.thenBy { it.Ф }
         )
 
 fun main() {
