@@ -13,12 +13,10 @@ dependencyResolutionManagement {
         gradlePluginPortal()
         mavenCentral()
         maven("https://repo.kotlin.link")
-        mavenLocal()
     }
     
     versionCatalogs {
         create("versions") { from("dev.lounres:versions:$versions") }
-        create("kone") { from("dev.lounres:kone.versionCatalog:0.0.0-experiment") }
     }
 }
 

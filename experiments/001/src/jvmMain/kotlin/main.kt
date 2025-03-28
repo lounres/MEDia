@@ -4,11 +4,8 @@
  */
 
 @file:Suppress("ClassName", "NonAsciiCharacters", "PropertyName", "LocalVariableName", "ObjectPropertyName")
-@file:OptIn(ExperimentalKoneAPI::class)
 
-import dev.lounres.kone.ExperimentalKoneAPI
 import dev.lounres.kone.algebraic.Rational
-import dev.lounres.kone.algebraic.minus
 import dev.lounres.kone.algebraic.one
 import dev.lounres.kone.algebraic.plus
 import dev.lounres.kone.collections.interop.toKoneList
@@ -21,8 +18,9 @@ import dev.lounres.kone.collections.utils.component5
 import dev.lounres.kone.collections.utils.component6
 import dev.lounres.kone.collections.utils.component7
 import dev.lounres.kone.combinatorics.enumerative.permutations
-import dev.lounres.kone.comparison.eq
-import dev.lounres.kone.context.invoke
+import dev.lounres.kone.contexts.invoke
+import dev.lounres.kone.relations.compareTo
+import dev.lounres.kone.relations.eq
 
 
 /**
@@ -69,7 +67,7 @@ val февральPermutations: Sequence<ФЕВРАЛЬ> =
         .map { ФЕВРАЛЬ(it) } // We put them in our data class.
         .filter { it.check() } // Then we filter out all non-solutions.
         .sortedWith( // In the end, we sort the solutions by value of the first fraction, then by value of Ф. I was asked to do it.
-            Comparator<ФЕВРАЛЬ> { perm1, perm2 -> Rational.context { (perm1.frac1 - perm2.frac1).numerator compareTo 0 } }.thenBy { it.Ф }
+            Comparator<ФЕВРАЛЬ> { perm1, perm2 -> Rational.context { perm1.frac1.compareTo(perm2.frac1) } }.thenBy { it.Ф }
         )
 
 fun main() {

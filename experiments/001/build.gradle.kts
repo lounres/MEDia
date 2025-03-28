@@ -41,17 +41,11 @@ kotlin {
         
         jvmMain {
             dependencies {
-                // TODO: Replace with released versions
-//                implementation(versions.kone.core)
-//                implementation(versions.kone.algebraic)
-//                implementation(versions.kone.numberTheory)
-//                implementation(versions.kone.collections)
-//                implementation(versions.kone.enumerativeCombinatorics)
-                implementation(kone.core)
-                implementation(kone.algebraic)
-                implementation(kone.numberTheory)
-                implementation(kone.collections)
-                implementation(kone.enumerativeCombinatorics)
+                implementation(versions.kone.contexts)
+                implementation(versions.kone.algebraic)
+                implementation(versions.kone.algebraicExtra)
+                implementation(versions.kone.collections)
+                implementation(versions.kone.enumerativeCombinatorics)
             }
         }
     }
