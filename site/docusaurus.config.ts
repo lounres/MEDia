@@ -38,20 +38,6 @@ const config: Config = {
         },
     },
 
-    plugins: [
-        [
-            '@docusaurus/plugin-content-docs',
-            {
-                id: 'experiments',
-                path: 'experiments',
-                routeBasePath: 'experiments',
-                sidebarPath: './experimentsSidebars.ts',
-                remarkPlugins: [remarkMath],
-                rehypePlugins: [rehypeKatex],
-            },
-        ]
-    ],
-
     presets: [
         [
             'classic',
@@ -59,7 +45,7 @@ const config: Config = {
                 docs: {
                     id: 'docs',
                     path: 'docs',
-                    routeBasePath: 'docs',
+                    routeBasePath: '/',
                     sidebarPath: './docsSidebars.ts',
                     remarkPlugins: [remarkMath],
                     rehypePlugins: [rehypeKatex],
@@ -80,7 +66,7 @@ const config: Config = {
                 theme: {
                     customCss: './src/css/custom.css',
                 },
-            } satisfies Preset.Options,
+            },
         ],
     ],
 
@@ -94,7 +80,6 @@ const config: Config = {
     ],
 
     themeConfig: {
-        // Replace with your project's social card
         image: '/img/logos/MEDia-logo-light-theme.svg', // TODO: Add social card
         // metadata: [],
         // announcementBar: {},
@@ -112,11 +97,16 @@ const config: Config = {
             },
             items: [
                 {
+                    to: '/',
+                    label: 'Blog',
+                    position: 'left'
+                },
+                {
                     type: 'docSidebar',
                     sidebarId: 'experiments',
                     position: 'left',
                     label: 'Experiments',
-                    docsPluginId: 'experiments',
+                    docsPluginId: 'docs',
                 },
                 {
                     type: 'docSidebar',
@@ -130,6 +120,7 @@ const config: Config = {
                     position: 'right',
                 },
             ],
+            hideOnScroll: true,
         },
         footer: {
             style: 'dark',
@@ -177,10 +168,12 @@ const config: Config = {
             copyright: `Copyright © ${new Date().getFullYear()} Gleb Minaev <br> All rights reserved. Licensed under the Apache License, Version 2.0 <br> Built with Docusaurus.`,
         },
         prism: {
+            defaultLanguage: 'kotlin',
+            additionalLanguages: ['kotlin', 'groovy', 'markup'],
             theme: themes.github,
             darkTheme: themes.dracula,
         },
-    } satisfies Preset.ThemeConfig,
+    },
 };
 
 export default config;

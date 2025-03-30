@@ -3,10 +3,8 @@ title: "Experiment 001: Vertical Math Fest 2023 grade 7 problem 2"
 tags: [math-fest]
 ---
 
-([Experiment project is available here.](https://github.com/lounres/MEDia/experiments/001))
-
 In February 2023, yet another Mathematical Festival was held in Moscow and other several cities.
-It is an mathematical olympiad for 6th and 7th grades that is held each February.
+It is a mathematical olympiad for sixth and seventh grades that is held each February.
 There was a [problem](https://olympiads.mccme.ru/matprazdnik/image/23/blank-vert7.pdf):
 <blockquote cite="https://olympiads.mccme.ru/matprazdnik/image/23/blank-vert7.pdf">
     Find any solution of rebus $$\text{Ф}/\text{Е} + \text{ВР}/\text{АЛЬ} = 1$$.
@@ -14,10 +12,10 @@ There was a [problem](https://olympiads.mccme.ru/matprazdnik/image/23/blank-vert
     Slash means division.
     As an answer, write down the whole number equality.
 </blockquote>
-(P.S. "ФЕВРАЛЬ" in Russian means "FEBRUARY" when the olympiad was held.)
+(P.S. "ФЕВРАЛЬ" in Russian means "FEBRUARY". The olympiad is usually held in February.)
 I was asked to find all possible solutions so that the olympiad examiners could check children's works faster.
 
-## At first, let's start with idea of the program!
+## At first, let's start with an idea of the program!
 
 The idea is simple, we will just go through all possible variants of the letters values.
 It means that we will go through all [7-permutations](https://en.wikipedia.org/wiki/Permutation#k-permutations_of_n)
@@ -27,12 +25,12 @@ and check each one of them if it satisfies the rebus.
 But there are $$P(10, 7) = \frac{10!}{(10-7)!} = 604\;800$$ possible permutations.
 We can store them in a list and map/filter that list into a new one and several times to get all sought answers.
 And there is no problem here because it's not that big number of elements for computer to suffer from.
-On the contrary, this way is faster than manipulation with sequences for such number of elements.
+On the contrary, this way is faster than manipulation with sequences for such a number of elements.
 But let us use sequences so that there won't be a problem with future rewriting of the code when there will be much more data to process.
 
 ## Solution
 
-First, we create a data class for the permutations and a simple fake constructor from list for it:
+First, we create a data class for the permutations and a simple fake constructor from a list for it:
 ```kotlin
 data class ФЕВРАЛЬ(val Ф: Int, val Е: Int, val В: Int, val Р: Int, val А: Int, val Л: Int, val Ь: Int)
 
@@ -49,7 +47,7 @@ val ФЕВРАЛЬ.frac1: Rational get() = Rational(Ф, Е)
 val ФЕВРАЛЬ.frac2: Rational get() = Rational(В * 10 + Р, (А * 10 + Л) * 10 + Ь)
 ```
 
-Then, let's check that the permutation is a correct:
+Then, let's check that the permutation is correct:
 ```kotlin
 fun ФЕВРАЛЬ.check(): Boolean = Ф != 0 && Е != 0 && В != 0 && А != 0 && context(Rational.context) { frac1 + frac2 eq one }
 ```
@@ -63,7 +61,7 @@ val февральPermutations: Sequence<ФЕВРАЛЬ> =
         .map { ФЕВРАЛЬ(it) }
 ```
 
-At second, we have just to filter out wrong permutations:
+At second, we have just to filter out the wrong permutations:
 ```kotlin
 val февральPermutations: Sequence<ФЕВРАЛЬ> =
     digits.permutations(7u)
@@ -82,7 +80,7 @@ val февральPermutations: Sequence<ФЕВРАЛЬ> =
         )
 ```
 
-Now we have all the solutions in `февральPermutations` variable. Let's print them in 3 different formats:
+Now we have all the solutions in `февральPermutations` variable. Let's print them in three different formats:
 ```kotlin
 fun main() {
     println("Ф Е В Р А Л Ь | ФЕВРАЛЬ | Ф/Е+ВР/АЛЬ")
@@ -154,3 +152,10 @@ Here are the results:
 7 8 6 3 5 0 4 | 7863504 | 7/8+63/504
 7 8 6 4 5 1 2 | 7864512 | 7/8+64/512
 ```
+
+## Code source
+
+[Experiment project is available here.](https://github.com/lounres/MEDia/experiments/001)
+
+If you are not familiar with Kotlin and/or Gradle,
+see [this guide](/docs/kotlin-gradle-project-setup) to set up your environment.
