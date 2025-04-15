@@ -52,19 +52,12 @@ kotlin {
         
         jvmMain {
             dependencies {
-                // TODO: Replace with released versions
-//                implementation(versions.kone.contexts)
-//                implementation(versions.kone.algebraic)
-//                implementation(versions.kone.algebraicExtra)
-//                implementation(versions.kone.collections)
-//                implementation(versions.kone.polynomial)
-//                implementation(versions.kone.misc.planimetricsCalculation)
-                implementation(kone.contexts)
-                implementation(kone.algebraic)
-                implementation(kone.algebraicExtra)
-                implementation(kone.collections)
-                implementation(kone.polynomial)
-                implementation(kone.misc.planimetricsCalculus)
+                implementation(versions.kone.contexts)
+                implementation(versions.kone.algebraic)
+                implementation(versions.kone.algebraicExtra)
+                implementation(versions.kone.collections)
+                implementation(versions.kone.polynomial)
+                implementation(versions.kone.misc.planimetricsCalculus)
             }
         }
     }
