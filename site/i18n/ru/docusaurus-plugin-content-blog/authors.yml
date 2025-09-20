@@ -4,7 +4,7 @@ lounres:
   page: true
   url: https://lounres.dev
   email: minaevgleb@yandex.ru
-  image_url: /img/authors/lounres.png
+  image_url: https://github.com/lounres.png
   socials:
 #    x: lounres
     github: lounres

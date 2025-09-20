@@ -1,5 +1,4 @@
 import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
 import {themes} from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
@@ -87,6 +86,9 @@ const config: Config = {
             sidebar: {
                 hideable: true,
             }
+        },
+        tableOfContents: {
+            maxHeadingLevel: 5,
         },
         navbar: {
             title: 'MEDia',

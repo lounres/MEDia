@@ -6,3 +6,7 @@ geometry:
   label: геометрия
   permalink: /geometry
   description: Геометрия — раздел математики
+algebra:
+  label: алгебра
+  permalink: /algebra
+  description: Алгебра — раздел математики
